@@ -4,7 +4,7 @@
 // User Implementation level functions prototypes
 type last_ui(Queue* q);
 type first_ui(Queue* q);
-void copy_ui(Queue* src, Queue* dest);
+void copy_ui(Queue* q1, Queue* q2);
 int size_ui(Queue* q);
 void destroy_ui(Queue* q);
 
