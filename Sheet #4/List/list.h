@@ -14,7 +14,7 @@ void createList(List* l);
 
 void insert(List* l, type element, int index);
 
-type retrive(List* l, int index);
+type retrieve(List* l, int index);
 
 int isEmpty(List* l);
 
