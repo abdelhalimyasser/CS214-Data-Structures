@@ -29,4 +29,6 @@ void destroy(list* l);
 
 void printList(list* l);
 
+int isPresent(list* l, type element);
+
 #endif // LINKEDLIST_H_INCLUDED
