@@ -15,6 +15,11 @@ int main()
 
     printf("Size: %d\n", size(l));
     printf("Element at index 2: %d\n", retrieve(l, 2));
+    
+    printList(l);
+    
+    isPresent(l, 30);
+    printList(l);
 
     destroy(l);
     printf("Is Empty: %d\n", isEmpty(l));
