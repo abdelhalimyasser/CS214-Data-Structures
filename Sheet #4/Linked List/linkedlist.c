@@ -65,6 +65,7 @@ type retrieve(list* l, int index)
     l->size--;
     return element;
 }
+
 int isEmpty(list* l)
 {
 	return l->size == 0;
@@ -101,3 +102,30 @@ void printList(list* l)
 	printf("\n");
 }
 
+int isPresent(list* l, type element)
+{
+    if(l->size <= 0 || l->head == NULL)
+        return 0;
+
+    if(l->head->data == element)
+        return 1;
+
+    Node* prev = l->head;
+    Node* curr = l->head->next;
+    
+    while(curr != NULL)
+    {
+        if(curr->data == element)
+        {
+            prev->next = curr->next;
+            
+            curr->next = l->head;
+            l->head = curr;
+            
+            return 1;
+        }
+        
+        prev = curr;
+        curr = curr->next;
+    }
+}    
